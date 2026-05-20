@@ -462,7 +462,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: start;
 }
 
 .section-title {
@@ -1194,40 +1194,26 @@ footer p {
     font-weight: 700;
 }
 
-/* macOS Terminal Window Modal */
-.mac-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(10, 10, 15, 0.85);
-    backdrop-filter: blur(8px);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* macOS Terminal Window (Inline) */
+.mac-window-wrapper {
+    max-height: 0;
     opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, margin-top 0.4s ease;
+    margin-top: 0;
 }
-.mac-modal.active {
+.mac-window-wrapper.active {
+    max-height: 800px;
     opacity: 1;
-    pointer-events: auto;
+    margin-top: 2rem;
 }
 .mac-window {
-    width: 90%;
-    max-width: 680px;
+    width: 100%;
     background: #11111b; /* Sleek terminal dark theme */
     border-radius: 12px;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    transform: scale(0.95);
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     overflow: hidden;
-}
-.mac-modal.active .mac-window {
-    transform: scale(1);
 }
 .mac-titlebar {
     display: flex;
@@ -1271,7 +1257,7 @@ footer p {
     padding: 2.5rem;
     color: #cdd6f4;
     font-size: 1.05rem;
-    max-height: 70vh;
+    max-height: 450px;
     overflow-y: auto;
     font-family: monospace;
     text-align: left;
@@ -1286,6 +1272,17 @@ footer p {
 }
 
 /* Desktop Folder */
+.desktop-folder-container {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    max-height: 180px;
+    opacity: 1;
+    overflow: hidden;
+}
+.desktop-folder-container.hidden {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+}
 .desktop-folder {
     display: inline-flex;
     flex-direction: column;
@@ -1306,10 +1303,13 @@ footer p {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 .folder-icon-wrapper {
-    font-size: 3.5rem;
-    color: #f9e2af;
     margin-bottom: 0.5rem;
     transition: transform 0.2s ease;
+}
+.mac-folder-img {
+    width: 65px;
+    height: auto;
+    object-fit: contain;
 }
 .desktop-folder:hover .folder-icon-wrapper {
     transform: scale(1.1);
