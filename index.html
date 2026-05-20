@@ -208,53 +208,15 @@
             <div class="container section-grid">
                 <div class="about-text">
                     <h2 class="section-title">About Me</h2>
-                    
-                    <div class="desktop-folder-container" id="bio-folder-container">
-                        <p>
-                            I am a passionate Security Researcher and VAPT specialist
-                            currently pursuing my BTech in Computer Science at Pimpri Chinchwad University (9+ CGPA).
-                        </p>
-                        <p>
-                            My journey in cybersecurity is driven by a deep curiosity to uncover vulnerabilities before they
-                            are exploited. Click on the system directory below to decrypt and view my credentials, detailed profile, and CVE records.
-                        </p>
-                        
-                        <!-- Desktop Folder Component -->
-                        <div class="desktop-folder" id="open-bio-folder" title="Click to view credentials">
-                            <div class="folder-icon-wrapper">
-                                <img src="assets/mac-folder.png" alt="macOS Folder" class="mac-folder-img">
-                            </div>
-                            <span class="folder-name">about_me.txt</span>
-                        </div>
-                    </div>
-
-                    <!-- macOS Window (Inline) -->
-                    <div class="mac-window-wrapper" id="bio-window-wrapper" style="display: none;">
-                        <div class="mac-window">
-                            <div class="mac-titlebar">
-                                <div class="mac-buttons">
-                                    <span class="mac-btn mac-close" id="close-bio-modal" title="Close"></span>
-                                    <span class="mac-btn mac-minimize" id="minimize-bio-modal" title="Minimize"></span>
-                                    <span class="mac-btn mac-maximize" id="maximize-bio-modal" title="Maximize"></span>
-                                </div>
-                                <div class="mac-title">about_me.txt — sharma19d@kali: ~</div>
-                            </div>
-                            <div class="mac-body">
-                                <div class="terminal-prefix">sharma19d@kali:~$ cat about_me.txt</div>
-                                <br>
-                                <p><strong>[+] Profile:</strong> Security Researcher & Application Security Engineer focused on discovering vulnerabilities, practicing secure code reviews, and building defensive architectures.</p>
-                                <p><strong>[+] Education:</strong> BTech in Computer Science, Pimpri Chinchwad University (9+ CGPA).</p>
-                                <p><strong>[+] Acknowledgments:</strong> Officially recognized by <strong>NASA</strong>, the <strong>WHO</strong>, <strong>Harvard University</strong>, and <strong>Eduplus</strong> for reporting critical vulnerabilities.</p>
-                                <p><strong>[+] CVE Records:</strong></p>
-                                <ul class="terminal-list">
-                                    <li><strong style="color: var(--accent-color);">CVE-2025-61148:</strong> Critical zero-day impacting 150+ academic institutions, securing sensitive data across the educational sector.</li>
-                                    <li><strong style="color: var(--accent-color);">CVE-2026-35678:</strong> Zero-day vulnerability discovered in web and application infrastructure, ensuring secure data integrity.</li>
-                                </ul>
-                                <br>
-                                <p><strong>[+] Innovation:</strong> Engineered a 100kV EMP generator to test hardware resilience, and built secure asynchronous data wiping software to guarantee clean recycling of digital assets.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <p>
+                        I am a passionate Security Researcher and VAPT specialist currently pursuing my BTech in Computer Science at Pimpri Chinchwad University with a 9+ CGPA. My journey in cybersecurity is driven by a deep curiosity to uncover vulnerabilities before they are exploited, with a focus on building defensive architectures and performing secure code reviews.
+                    </p>
+                    <p>
+                        Over the course of my research, I have been officially recognized by NASA, the World Health Organization, Harvard University, and Eduplus for reporting critical security vulnerabilities. I have also discovered two CVEs, registered as CVE-2025-61148 and CVE-2026-35678.
+                    </p>
+                    <p>
+                        Beyond active security research, I enjoy engineering custom hardware and software solutions. I built a 100kV EMP generator to test hardware resilience against electromagnetic threats, and created secure asynchronous data wiping software to guarantee the clean and safe recycling of digital assets.
+                    </p>
                 </div>
 
                 <div class="skills-card">
@@ -284,6 +246,26 @@
                 <h2 class="section-title">Featured Work</h2>
 
                 <div class="projects-grid">
+                    <!-- Project SENTINEL (Active FYP) -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <span class="project-date">April 2026 – Present</span>
+                            <h3>SENTINEL</h3>
+                            <p class="project-sub">Agentic AI IoT Security System</p>
+                            <p>A consumer-grade, plug-and-play network security appliance powered by a multi-agent AI system. It sits inline between the router and home network to automatically discover IoT devices, detect anomalies using an LSTM model, classify threats via a local LLM mapped to MITRE ATT&amp;CK, deploy honeypots to trap attackers, and enforce firewall rules in real time. Designed to run entirely on a Raspberry Pi 5 with no cloud dependency.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>LangGraph</span>
+                                <span>Gemma 4</span>
+                                <span>LSTM</span>
+                                <span>eBPF / XDP</span>
+                                <span>FastAPI</span>
+                                <span>Next.js</span>
+                                <span>MITRE ATT&amp;CK</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Project 1 -->
                     <div class="project-card">
                         <div class="project-content">
