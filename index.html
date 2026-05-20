@@ -203,9 +203,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- About Section -->
+        </section>        <!-- About Section -->
         <section id="about" class="about-section">
             <div class="container section-grid">
                 <div class="about-text">
@@ -213,19 +211,20 @@
                     <p>
                         I am a passionate Security Researcher and VAPT specialist
                         currently pursuing my BTech in Computer Science at Pimpri Chinchwad University (9+ CGPA).
+                    </p>
+                    <p>
                         My journey in cybersecurity is driven by a deep curiosity to uncover vulnerabilities before they
-                        are exploited.
+                        are exploited. Click on the system directory below to decrypt and view my credentials, detailed profile, and CVE records.
                     </p>
-                    <p>
-                        I've had the honor of being officially recognized by NASA, WHO, Harvard University, and
-                        Eduplus for reporting valid security vulnerabilities.
-                        Recently, I uncovered a critical vulnerability (CVE-2025-61148) that impacted over 150+ colleges
-                        and universities, securing sensitive data across the educational sector.
-                    </p>
-                    <p>
-                        Whether it's building a 100kV EMP generator or engineering an asynchronous data wipe engine, I
-                        thrive at the bleeding edge of security and engineering.
-                    </p>
+                    
+                    <!-- Desktop Folder Component -->
+                    <div class="desktop-folder" id="open-bio-folder" title="Click to view credentials">
+                        <div class="folder-icon-wrapper">
+                            <i class="fa-solid fa-folder folder-close-state"></i>
+                            <i class="fa-solid fa-folder-open folder-open-state" style="display: none;"></i>
+                        </div>
+                        <span class="folder-name">about_me.txt</span>
+                    </div>
                 </div>
 
                 <div class="skills-card">
@@ -244,6 +243,34 @@
                         <span>DevSecOps Knowledge</span>
                         <span>API Security Expertise</span>
                         <span>Communication & Reporting</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- macOS Window Modal -->
+            <div class="mac-modal" id="bio-modal">
+                <div class="mac-window">
+                    <div class="mac-titlebar">
+                        <div class="mac-buttons">
+                            <span class="mac-btn mac-close" id="close-bio-modal" title="Close"></span>
+                            <span class="mac-btn mac-minimize" title="Minimize"></span>
+                            <span class="mac-btn mac-maximize" title="Maximize"></span>
+                        </div>
+                        <div class="mac-title">about_me.txt — sharma19d@kali: ~</div>
+                    </div>
+                    <div class="mac-body">
+                        <div class="terminal-prefix">sharma19d@kali:~$ cat about_me.txt</div>
+                        <br>
+                        <p><strong>[+] Profile:</strong> Security Researcher & Application Security Engineer focused on discovering vulnerabilities, practicing secure code reviews, and building defensive architectures.</p>
+                        <p><strong>[+] Education:</strong> BTech in Computer Science, Pimpri Chinchwad University (9+ CGPA).</p>
+                        <p><strong>[+] Acknowledgments:</strong> Officially recognized by <strong>NASA</strong>, the <strong>WHO</strong>, <strong>Harvard University</strong>, and <strong>Eduplus</strong> for reporting critical vulnerabilities.</p>
+                        <p><strong>[+] CVE Records:</strong></p>
+                        <ul class="terminal-list">
+                            <li><strong style="color: var(--accent-color);">CVE-2025-61148:</strong> Critical zero-day impacting 150+ academic institutions, securing sensitive data across the educational sector.</li>
+                            <li><strong style="color: var(--accent-color);">CVE-2026-35678:</strong> Zero-day vulnerability discovered in web and application infrastructure, ensuring secure data integrity.</li>
+                        </ul>
+                        <br>
+                        <p><strong>[+] Innovation:</strong> Engineered a 100kV EMP generator to test hardware resilience, and built secure asynchronous data wiping software to guarantee clean recycling of digital assets.</p>
                     </div>
                 </div>
             </div>

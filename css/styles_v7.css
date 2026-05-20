@@ -23,6 +23,7 @@ html {
     /* Slightly smaller base font (14.5px instead of 16px) for a professional, refined look.
        This will gracefully scale down all rem-based sizes (fonts, buttons, padding) by ~10% */
     font-size: 14.5px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -1191,6 +1192,151 @@ footer p {
     margin-bottom: 1.5rem;
     color: var(--text-main);
     font-weight: 700;
+}
+
+/* macOS Terminal Window Modal */
+.mac-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mac-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.mac-window {
+    width: 90%;
+    max-width: 680px;
+    background: #11111b; /* Sleek terminal dark theme */
+    border-radius: 12px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+}
+.mac-modal.active .mac-window {
+    transform: scale(1);
+}
+.mac-titlebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #181825;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    user-select: none;
+}
+.mac-buttons {
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+.mac-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+.mac-close { background: #ff5f56; }
+.mac-minimize { background: #ffbd2e; }
+.mac-maximize { background: #27c93f; }
+.mac-title {
+    color: #a6adc8;
+    font-size: 0.85rem;
+    font-weight: 500;
+    font-family: monospace;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+}
+.mac-body {
+    padding: 2.5rem;
+    color: #cdd6f4;
+    font-size: 1.05rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    font-family: monospace;
+    text-align: left;
+}
+.mac-body p {
+    margin-bottom: 1.2rem;
+    color: #bac2de;
+    line-height: 1.7;
+}
+.mac-body p strong {
+    color: var(--accent-color);
+}
+
+/* Desktop Folder */
+.desktop-folder {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 1.2rem 2rem;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px dashed rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    width: fit-content;
+}
+.desktop-folder:hover {
+    background: rgba(16, 185, 129, 0.08);
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+.folder-icon-wrapper {
+    font-size: 3.5rem;
+    color: #f9e2af;
+    margin-bottom: 0.5rem;
+    transition: transform 0.2s ease;
+}
+.desktop-folder:hover .folder-icon-wrapper {
+    transform: scale(1.1);
+}
+.folder-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+    font-family: monospace;
+}
+.terminal-prefix {
+    color: #a6e3a1;
+}
+.terminal-list {
+    list-style: none;
+    padding-left: 1.2rem;
+}
+.terminal-list li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    color: #bac2de;
+}
+.terminal-list li::before {
+    content: "❯";
+    position: absolute;
+    left: -1.2rem;
+    color: var(--accent-color);
 }
 
 @media (max-width: 768px) {
