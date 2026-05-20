@@ -1194,7 +1194,7 @@ footer p {
     font-weight: 700;
 }
 
-/* macOS Terminal Window (Inline) */
+/* macOS Terminal Window (Inline - Light Theme) */
 .mac-window-wrapper {
     max-height: 0;
     opacity: 0;
@@ -1209,19 +1209,19 @@ footer p {
 }
 .mac-window {
     width: 100%;
-    background: #11111b; /* Sleek terminal dark theme */
+    background: #ffffff; /* Premium Light theme background */
     border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.12);
     overflow: hidden;
 }
 .mac-titlebar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #181825;
+    background: #f0f0f0; /* macOS Light title bar */
     padding: 0.8rem 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     position: relative;
     user-select: none;
 }
@@ -1242,7 +1242,7 @@ footer p {
 .mac-minimize { background: #ffbd2e; }
 .mac-maximize { background: #27c93f; }
 .mac-title {
-    color: #a6adc8;
+    color: #4f4f4f; /* macOS Dark gray title text */
     font-size: 0.85rem;
     font-weight: 500;
     font-family: monospace;
@@ -1255,16 +1255,17 @@ footer p {
 }
 .mac-body {
     padding: 2.5rem;
-    color: #cdd6f4;
+    color: #1e1e1e; /* Dark monospace text */
     font-size: 1.05rem;
     max-height: 450px;
     overflow-y: auto;
     font-family: monospace;
     text-align: left;
+    background: #f9f9f9; /* Subtle light background */
 }
 .mac-body p {
     margin-bottom: 1.2rem;
-    color: #bac2de;
+    color: #24292f;
     line-height: 1.7;
 }
 .mac-body p strong {
@@ -1321,7 +1322,7 @@ footer p {
     font-family: monospace;
 }
 .terminal-prefix {
-    color: #a6e3a1;
+    color: #22863a;
 }
 .terminal-list {
     list-style: none;
@@ -1330,7 +1331,7 @@ footer p {
 .terminal-list li {
     margin-bottom: 0.8rem;
     position: relative;
-    color: #bac2de;
+    color: #24292f;
 }
 .terminal-list li::before {
     content: "❯";

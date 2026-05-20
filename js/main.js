@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (openFolderBtn && bioWindowWrapper && folderContainer) {
         const openBio = () => {
+            bioWindowWrapper.style.display = 'block';
+            bioWindowWrapper.offsetHeight; // Force reflow
             bioWindowWrapper.classList.add('active');
             folderContainer.classList.add('hidden');
         };
@@ -29,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeBio = () => {
             bioWindowWrapper.classList.remove('active');
             folderContainer.classList.remove('hidden');
+            setTimeout(() => {
+                if (!bioWindowWrapper.classList.contains('active')) {
+                    bioWindowWrapper.style.display = 'none';
+                }
+            }, 500);
         };
 
         openFolderBtn.addEventListener('click', openBio);
