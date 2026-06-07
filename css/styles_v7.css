@@ -1145,7 +1145,8 @@ footer p {
 }
 
 .graph-container {
-    max-width: 700px;
+    max-width: 980px;
+    width: 100%;
     margin: 0 auto;
     background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(17, 24, 39, 0.92));
     backdrop-filter: blur(24px);
@@ -1186,6 +1187,7 @@ footer p {
 .graph-legend-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    fill: #e2e8f0;
 }
 
 .graph-grid line {
@@ -1194,7 +1196,7 @@ footer p {
 }
 
 .graph-kicker {
-    fill: #34d399;
+    fill: #5eead4;
     font-size: 0.95rem;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1208,7 +1210,7 @@ footer p {
 
 .graph-axis-label,
 .graph-side-label {
-    fill: rgba(226, 232, 240, 0.72);
+    fill: rgba(241, 245, 249, 0.88);
     font-size: 0.85rem;
 }
 
@@ -1223,7 +1225,7 @@ footer p {
 }
 
 .graph-legend-text {
-    fill: #cbd5e1;
+    fill: #f8fafc;
     font-size: 0.9rem;
 }
 
