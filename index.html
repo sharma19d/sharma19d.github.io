@@ -141,60 +141,85 @@
                 <div class="graph-container">
                     <svg viewBox="0 0 800 500" class="growth-svg">
                         <defs>
-                            <marker id="arrow-academics" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse">
-                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b" />
+                            <linearGradient id="graph-bg-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#0f172a" />
+                                <stop offset="55%" stop-color="#111827" />
+                                <stop offset="100%" stop-color="#0b1220" />
+                            </linearGradient>
+                            <marker id="arrow-academics" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8" />
                             </marker>
-                            <marker id="arrow-tech" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse">
-                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b" />
+                            <marker id="arrow-tech" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#34d399" />
                             </marker>
-                            <marker id="arrow-skills" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse">
-                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6" />
+                            <marker id="arrow-skills" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8" />
                             </marker>
-                            <marker id="arrow-creativity" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse">
-                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#ec4899" />
+                            <marker id="arrow-creativity" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#f472b6" />
                             </marker>
                         </defs>
-                        <!-- Y-axis -->
-                        <line x1="60" y1="50" x2="60" y2="450" class="graph-axis" />
-                        <!-- X-axis -->
-                        <line x1="40" y1="430" x2="750" y2="430" class="graph-axis" />
-                        <!-- Arrows & Infinity Symbols -->
-                        <polyline points="50,60 60,50 70,60" class="graph-axis" fill="none" />
-                        <text x="52" y="35" class="graph-text" fill="var(--text-muted)" font-size="24">∞</text>
-                        
-                        <polyline points="740,420 750,430 740,440" class="graph-axis" fill="none" />
-                        <text x="760" y="437" class="graph-text" fill="var(--text-muted)" font-size="24">∞</text>
+                        <rect x="25" y="25" width="750" height="450" rx="26" fill="url(#graph-bg-glow)" />
 
-                        <!-- Axes Labels -->
-                        <text x="-250" y="30" transform="rotate(-90)" class="graph-text" fill="var(--text-muted)" font-size="16">Growth</text>
-                        <text x="380" y="470" class="graph-text" fill="var(--text-muted)" font-size="16">time</text>
-
-                        <!-- Legend Box (Top Left Area) -->
-                        <g class="graph-legend">
-                            <line x1="150" y1="80" x2="180" y2="80" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
-                            <text x="190" y="85" class="graph-text" fill="var(--text-main)" font-size="14">Expert in tech</text>
-
-                            <line x1="150" y1="110" x2="180" y2="110" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" />
-                            <text x="190" y="115" class="graph-text" fill="var(--text-main)" font-size="14">Skills</text>
-
-                            <line x1="150" y1="140" x2="180" y2="140" stroke="#ec4899" stroke-width="3" stroke-dasharray="8,8" />
-                            <text x="190" y="145" class="graph-text" fill="var(--text-main)" font-size="14">Creativity</text>
-
-                            <line x1="150" y1="170" x2="180" y2="170" stroke="#64748b" stroke-width="4" stroke-linecap="round" />
-                            <text x="190" y="175" class="graph-text" fill="var(--text-main)" font-size="14">Academics</text>
+                        <g class="graph-grid">
+                            <line x1="100" y1="100" x2="700" y2="100" />
+                            <line x1="100" y1="165" x2="700" y2="165" />
+                            <line x1="100" y1="230" x2="700" y2="230" />
+                            <line x1="100" y1="295" x2="700" y2="295" />
+                            <line x1="100" y1="360" x2="700" y2="360" />
+                            <line x1="100" y1="425" x2="700" y2="425" />
+                            <line x1="100" y1="100" x2="100" y2="425" />
+                            <line x1="220" y1="100" x2="220" y2="425" />
+                            <line x1="340" y1="100" x2="340" y2="425" />
+                            <line x1="460" y1="100" x2="460" y2="425" />
+                            <line x1="580" y1="100" x2="580" y2="425" />
+                            <line x1="700" y1="100" x2="700" y2="425" />
                         </g>
 
-                        <!-- Creativity Line (Pink Dashed) -->
-                        <line x1="60" y1="330" x2="680" y2="180" class="line-creativity" marker-end="url(#arrow-creativity)" />
+                        <text x="100" y="70" class="graph-kicker">Trajectory</text>
+                        <text x="100" y="92" class="graph-headline">Growth curves with a smile</text>
 
-                        <!-- Academics Line (Grey) -->
-                        <path d="M 60 120 Q 70 360 100 380 Q 250 380 350 380 Q 400 380 450 380 Q 550 380 600 320 Q 650 180 660 60" class="line-academics" marker-end="url(#arrow-academics)" />
+                        <line x1="100" y1="425" x2="710" y2="425" class="graph-axis" />
+                        <line x1="100" y1="435" x2="100" y2="85" class="graph-axis" />
+                        <polyline points="700,415 710,425 700,435" class="graph-axis-arrow" fill="none" />
+                        <polyline points="90,95 100,85 110,95" class="graph-axis-arrow" fill="none" />
 
-                        <!-- Expert in Tech (Orange) -->
-                        <path d="M 60 420 Q 300 420 450 370 Q 550 280 630 100" class="line-tech" marker-end="url(#arrow-tech)" />
+                        <text x="58" y="430" class="graph-axis-label">0</text>
+                        <text x="48" y="365" class="graph-axis-label">20</text>
+                        <text x="48" y="300" class="graph-axis-label">40</text>
+                        <text x="48" y="235" class="graph-axis-label">60</text>
+                        <text x="48" y="170" class="graph-axis-label">80</text>
+                        <text x="40" y="105" class="graph-axis-label">100</text>
 
-                        <!-- Skills (Blue) -->
-                        <path d="M 60 400 Q 400 380 550 250 Q 620 160 660 140" class="line-skills" marker-end="url(#arrow-skills)" />
+                        <text x="106" y="455" class="graph-axis-label">Start</text>
+                        <text x="205" y="455" class="graph-axis-label">Learn</text>
+                        <text x="325" y="455" class="graph-axis-label">Build</text>
+                        <text x="445" y="455" class="graph-axis-label">Break</text>
+                        <text x="555" y="455" class="graph-axis-label">Scale</text>
+                        <text x="670" y="455" class="graph-axis-label">Lead</text>
+
+                        <text x="58" y="78" class="graph-side-label">Impact</text>
+                        <text x="655" y="485" class="graph-side-label">Time</text>
+
+                        <g class="graph-legend">
+                            <rect x="500" y="55" width="225" height="118" rx="18" class="graph-legend-panel" />
+                            <line x1="525" y1="88" x2="560" y2="88" stroke="#34d399" stroke-width="4" stroke-linecap="round" />
+                            <text x="575" y="93" class="graph-legend-text">Expert in tech</text>
+
+                            <line x1="525" y1="115" x2="560" y2="115" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+                            <text x="575" y="120" class="graph-legend-text">Skills</text>
+
+                            <line x1="525" y1="142" x2="560" y2="142" stroke="#f472b6" stroke-width="3" stroke-dasharray="8,8" />
+                            <text x="575" y="147" class="graph-legend-text">Creativity</text>
+
+                            <line x1="525" y1="169" x2="560" y2="169" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" />
+                            <text x="575" y="174" class="graph-legend-text">Academics</text>
+                        </g>
+
+                        <path d="M 100 292 Q 190 355 300 340 T 490 282 T 700 188" class="line-academics" marker-end="url(#arrow-academics)" />
+                        <path d="M 100 375 Q 225 402 340 360 T 520 248 T 700 130" class="line-tech" marker-end="url(#arrow-tech)" />
+                        <path d="M 100 340 Q 215 382 330 350 T 525 260 T 700 165" class="line-skills" marker-end="url(#arrow-skills)" />
+                        <path d="M 100 245 Q 215 305 330 292 T 510 235 T 700 150" class="line-creativity" marker-end="url(#arrow-creativity)" />
                     </svg>
 
                     <div class="graph-cta">
