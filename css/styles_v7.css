@@ -34,6 +34,11 @@ body {
     line-height: 1.6;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 /* Background Blobs */
 .background-blobs {
     position: fixed;
@@ -1103,6 +1108,8 @@ footer p {
     .hero-content {
         flex-direction: column;
         gap: 2rem;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     .portrait-container {
@@ -1118,6 +1125,15 @@ footer p {
     .section-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 
@@ -1362,12 +1378,48 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 4rem 1.25rem;
+    }
+
+    .navbar {
+        padding: 1.25rem 1.25rem;
+    }
+
     .nav-links {
         display: none;
     }
 
+    .navbar .btn {
+        padding: 0.55rem 0.9rem;
+        font-size: 0.75rem;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding-top: 110px;
+    }
+
+    .hero-content {
+        margin-top: 0;
+        gap: 1.75rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
     .hero-text h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        line-height: 1.1;
+        letter-spacing: -1px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .role-subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 1.4px;
     }
 
     .portrait-container {
@@ -1384,16 +1436,99 @@ footer p {
         position: static;
         flex-direction: row;
         transform: none;
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
         justify-content: center;
+        width: 100%;
     }
 
     .section-title {
         font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-subtitle {
+        text-align: center;
+        margin-bottom: 2.25rem;
+    }
+
+    .skills-card,
+    .project-card,
+    .graph-container,
+    .content-card,
+    .cert-card {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .skills-card {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .skills-card h3,
+    .content-column h3 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .skills-tags {
+        justify-content: center;
+    }
+
+    .experience-list {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-dot {
+        left: -2rem;
+    }
+
+    .cert-card {
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .gallery-wrapper {
+        width: 100%;
+        left: auto;
+        transform: none;
+        padding: 1rem 0;
+    }
+
+    .gallery-track {
+        gap: 1rem;
+    }
+
+    .gallery-item {
+        width: min(320px, calc(100vw - 2.5rem));
+        height: 220px;
+    }
+
+    .content-info {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .mac-body {
+        padding: 1.5rem;
     }
 
     .contact-cta h2 {
         font-size: 2rem;
+    }
+
+    .contact-cta p {
+        font-size: 1rem;
+    }
+
+    .btn-large {
+        width: 100%;
+        justify-content: center;
     }
 
     .blob {
