@@ -38,9 +38,32 @@
     <link rel="stylesheet" href="css/styles_v7.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured Data for Search Engines -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vinay Sharma",
+        "url": "https://sharmavinay.me/",
+        "image": "https://sharmavinay.me/personal-photo.png",
+        "jobTitle": "Application Security Engineer",
+        "description": "Security Researcher & VAPT specialist recognized by NASA, WHO and Harvard University for reporting critical vulnerabilities. Discoverer of CVE-2025-61148 and CVE-2026-35678.",
+        "email": "mailto:vinayyssharma17@gmail.com",
+        "sameAs": [
+            "https://linkedin.com/in/vinay19d/",
+            "https://github.com/sharma19d",
+            "https://medium.com/@Charon19d"
+        ],
+        "knowsAbout": ["Penetration Testing", "Web Application Security", "API Security", "Threat Modeling", "Secure Code Review", "DevSecOps"]
+    }
+    </script>
 </head>
 
 <body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" aria-hidden="true"></div>
 
     <!-- Dynamic Background Elements -->
     <div class="background-blobs">
@@ -66,7 +89,24 @@
         <a href="assets/ressume/Vinay_Sharma_Resume.pdf" class="btn btn-primary" download>
             Download CV <i class="fa-solid fa-download"></i>
         </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#achievements">Gallery</a></li>
+            <li><a href="#content">Content</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </div>
 
     <main>
         <!-- Home / Hero Section -->
@@ -105,7 +145,8 @@
                 <!-- Text Area (Right) -->
                 <div class="hero-text">
                     <h1 class="glitch hacker-name" data-text="Vinay Sharma" aria-label="Vinay Sharma">Vinay Sharma</h1>
-                    <h2 class="role-subtitle">SECURITY ENGINEER</h2>
+                    <h2 class="role-subtitle"><span id="typed-role">SECURITY ENGINEER</span><span
+                            class="typed-cursor" aria-hidden="true">_</span></h2>
                 </div>
             </div>
 
@@ -130,6 +171,30 @@
                         <div class="logo-item"><img src="assets/logo/adidas.png" alt="Adidas"></div>
                         <div class="logo-item"><img src="assets/logo/eduplus.webp" alt="Eduplus"></div>
                         <div class="logo-item"><img src="assets/logo/nfl-logo.png" alt="NFL"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Stats Strip -->
+        <section id="impact" class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="2">0</span>
+                        <span class="stat-label">CVEs Discovered</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="6" data-suffix="+">0</span>
+                        <span class="stat-label">Organizations Secured</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="150" data-suffix="+">0</span>
+                        <span class="stat-label">Institutions Protected by One CVE</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="99.35" data-decimals="2" data-suffix="%">0</span>
+                        <span class="stat-label">DDoS Detection Accuracy</span>
                     </div>
                 </div>
             </div>
@@ -261,6 +326,65 @@
                         <span>API Security Expertise</span>
                         <span>Communication & Reporting</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Advisories Section -->
+        <section id="advisories" class="advisories-section">
+            <div class="container">
+                <h2 class="section-title">Security Advisories</h2>
+                <p class="section-subtitle">Publicly registered vulnerabilities and official recognitions from my
+                    research.</p>
+
+                <div class="advisory-grid">
+                    <div class="advisory-card">
+                        <div class="advisory-header">
+                            <span class="advisory-id"><i class="fa-solid fa-bug"></i> CVE-2025-61148</span>
+                            <span class="advisory-severity critical">Critical</span>
+                        </div>
+                        <div class="advisory-body">
+                            <h3>Zero-Day in University ERP Platform</h3>
+                            <p>Discovered and responsibly disclosed a critical zero-day in a widely deployed education
+                                ERP system, impacting 150+ colleges and universities across the city. Coordinated with
+                                the vendor until a patch was shipped.</p>
+                            <div class="advisory-meta">
+                                <span><i class="fa-solid fa-crosshairs"></i> Zero-Day</span>
+                                <span><i class="fa-solid fa-handshake"></i> Responsible Disclosure</span>
+                                <span><i class="fa-solid fa-building-columns"></i> 150+ Institutions</span>
+                            </div>
+                            <a href="https://medium.com/@Charon19d/how-i-hacked-all-universities-in-my-city-d6b8e320455c"
+                                target="_blank" class="content-link">Read the Disclosure <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="advisory-card">
+                        <div class="advisory-header">
+                            <span class="advisory-id"><i class="fa-solid fa-bug"></i> CVE-2026-35678</span>
+                            <span class="advisory-severity reserved">Reserved</span>
+                        </div>
+                        <div class="advisory-body">
+                            <h3>Coordinated Disclosure in Progress</h3>
+                            <p>My second registered CVE. Technical details are withheld while the vendor completes
+                                remediation — the full advisory and write-up will be published once coordinated
+                                disclosure concludes.</p>
+                            <div class="advisory-meta">
+                                <span><i class="fa-solid fa-lock"></i> Under Embargo</span>
+                                <span><i class="fa-solid fa-handshake"></i> Responsible Disclosure</span>
+                                <span><i class="fa-solid fa-hourglass-half"></i> Write-up Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hof-strip">
+                    <span class="hof-chip"><i class="fa-solid fa-award"></i> NASA Hall of Fame</span>
+                    <span class="hof-chip"><i class="fa-solid fa-award"></i> WHO Recognition</span>
+                    <span class="hof-chip"><i class="fa-solid fa-award"></i> Harvard University</span>
+                    <span class="hof-chip"><i class="fa-solid fa-award"></i> Adidas</span>
+                    <span class="hof-chip"><i class="fa-solid fa-award"></i> NFL</span>
+                    <span class="hof-chip"><i class="fa-solid fa-award"></i> Eduplus</span>
                 </div>
             </div>
         </section>
@@ -439,51 +563,51 @@
                     <!-- Row 1: Left Scrolling -->
                     <div class="gallery-track">
                         <!-- Original Set -->
-                        <div class="gallery-item"><img src="assets/gallary/1698140303490.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1714816410874.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1715487954125.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1715487954262.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1715487961362.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1741756243493.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1741756247383.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/33333.jpg.jpeg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/44444.jpg.jpeg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1698140303490.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1714816410874.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1715487954125.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1715487954262.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1715487961362.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1741756243493.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1741756247383.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/33333.jpg.jpeg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/44444.jpg.jpeg" alt="Gallery Image"></div>
                         
                         <!-- Duplicated Set for Infinite Scroll -->
-                        <div class="gallery-item"><img src="assets/gallary/1698140303490.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1714816410874.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1715487954125.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1715487954262.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1715487961362.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1741756243493.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1741756247383.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/33333.jpg.jpeg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/44444.jpg.jpeg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1698140303490.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1714816410874.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1715487954125.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1715487954262.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1715487961362.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1741756243493.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1741756247383.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/33333.jpg.jpeg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/44444.jpg.jpeg" alt="Gallery Image"></div>
                     </div>
 
                     <!-- Row 2: Right Scrolling -->
                     <div class="gallery-track reverse">
                         <!-- Original Set -->
-                        <div class="gallery-item"><img src="assets/gallary/1741756247745.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1741756247873.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1741756251103.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1741756251369.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1764480167658.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1765193894728.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/5555.jpg.jpeg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/6666.png" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/77777.png" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1741756247745.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1741756247873.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1741756251103.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1741756251369.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1764480167658.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1765193894728.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/5555.jpg.jpeg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/6666.png" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/77777.png" alt="Gallery Image"></div>
                         
                         <!-- Duplicated Set for Infinite Scroll -->
-                        <div class="gallery-item"><img src="assets/gallary/1741756247745.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1741756247873.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1741756251103.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1741756251369.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1764480167658.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/1765193894728.jpg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/5555.jpg.jpeg" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/6666.png" alt="Gallery Image"></div>
-                        <div class="gallery-item"><img src="assets/gallary/77777.png" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1741756247745.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1741756247873.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1741756251103.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1741756251369.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1764480167658.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/1765193894728.jpg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/5555.jpg.jpeg" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/6666.png" alt="Gallery Image"></div>
+                        <div class="gallery-item"><img loading="lazy" src="assets/gallary/77777.png" alt="Gallery Image"></div>
                     </div>
                 </div>
             </div>
@@ -503,7 +627,7 @@
 
                         <div class="content-card video-card">
                             <div class="video-thumbnail">
-                                <img src="https://img.youtube.com/vi/BRxCueP1lj0/maxresdefault.jpg"
+                                <img loading="lazy" src="https://img.youtube.com/vi/BRxCueP1lj0/maxresdefault.jpg"
                                     alt="What is adb android debugger">
                                 <div class="play-btn"><i class="fa-solid fa-play"></i></div>
                             </div>
@@ -518,7 +642,7 @@
 
                         <div class="content-card video-card">
                             <div class="video-thumbnail">
-                                <img src="https://img.youtube.com/vi/mfD3gmahJuA/maxresdefault.jpg"
+                                <img loading="lazy" src="https://img.youtube.com/vi/mfD3gmahJuA/maxresdefault.jpg"
                                     alt="Static and dynamic Analysis">
                                 <div class="play-btn"><i class="fa-solid fa-play"></i></div>
                             </div>
@@ -619,6 +743,16 @@
             <p>&copy; 2026 Vinay Sharma. Built with precision.</p>
         </div>
     </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Hidden Easter Egg Toast -->
+    <div id="hacker-toast" class="hacker-toast" role="status" aria-live="polite">
+        <span class="terminal-prefix">vinay@sharmavinay.me:~$</span> ACCESS GRANTED — nice instincts ;)
+    </div>
 
     <script src="js/main.js"></script>
 </body>
