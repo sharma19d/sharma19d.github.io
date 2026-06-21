@@ -29,10 +29,10 @@
     <meta property="twitter:image" content="https://sharmavinay.me/personal-photo.png">
 
     <title>Vinay Sharma | Security Researcher & VAPT</title>
-    <!-- Google Fonts: Montserrat -->
+    <!-- Google Fonts: Fira Code -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles_v7.css">
@@ -144,35 +144,23 @@
 
                 <!-- Text Area (Right) -->
                 <div class="hero-text">
-                    <h1 class="glitch hacker-name" data-text="Vinay Sharma" aria-label="Vinay Sharma">Vinay Sharma</h1>
+                    <h1 class="hacker-name" aria-label="Vinay Sharma">Vinay Sharma</h1>
                     <h2 class="role-subtitle"><span id="typed-role">SECURITY ENGINEER</span><span
                             class="typed-cursor" aria-hidden="true">_</span></h2>
                 </div>
             </div>
 
-            <!-- Acknowledgments Banner (Moved Below Name) -->
+            <!-- Acknowledgments Banner (Claude-style compact strip) -->
             <div class="acknowledgments-banner" style="margin-top: 6rem;">
-                <p
-                    style="text-align: center; margin-bottom: 0.8rem; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">
-                    Discovered Critical Vulnerabilities For</p>
-                <div class="scrolling-logos">
-                    <div class="logo-track">
-                        <div class="logo-item"><img src="assets/logo/PCU-logo.png" alt="PCU"></div>
-                        <div class="logo-item"><img src="assets/logo/nasa.png" alt="NASA"></div>
-                        <div class="logo-item"><img src="assets/logo/who.png" alt="WHO"></div>
-                        <div class="logo-item"><img src="assets/logo/adidas.png" alt="Adidas"></div>
-                        <div class="logo-item"><img src="assets/logo/eduplus.webp" alt="Eduplus"></div>
-                        <div class="logo-item"><img src="assets/logo/nfl-logo.png" alt="NFL"></div>
-
-                        <!-- Duplicated for seamless scrolling -->
-                        <div class="logo-item"><img src="assets/logo/PCU-logo.png" alt="PCU"></div>
-                        <div class="logo-item"><img src="assets/logo/nasa.png" alt="NASA"></div>
-                        <div class="logo-item"><img src="assets/logo/who.png" alt="WHO"></div>
-                        <div class="logo-item"><img src="assets/logo/adidas.png" alt="Adidas"></div>
-                        <div class="logo-item"><img src="assets/logo/eduplus.webp" alt="Eduplus"></div>
-                        <div class="logo-item"><img src="assets/logo/nfl-logo.png" alt="NFL"></div>
-                    </div>
+                <div class="acknowledgments-strip" aria-label="Organizations acknowledged">
+                    <div class="acknowledgment-logo"><img src="assets/logo/PCU-logo.png" alt="PCU"></div>
+                    <div class="acknowledgment-logo"><img src="assets/logo/nasa.png" alt="NASA"></div>
+                    <div class="acknowledgment-logo"><img src="assets/logo/who.png" alt="WHO"></div>
+                    <div class="acknowledgment-logo"><img src="assets/logo/adidas.png" alt="Adidas"></div>
                 </div>
+                <p
+                    style="text-align: center; margin-top: 0.9rem; margin-bottom: 0; font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">
+                    Discovered Critical Vulnerabilities For</p>
             </div>
         </section>
 
@@ -200,28 +188,73 @@
             </div>
         </section>
 
-        <!-- Growth Graph Section -->
-        <section id="growth" class="growth-section">
+        <!-- Portfolio Workspace: About, Trajectory and Technical Arsenal -->
+        <section id="about" class="growth-section portfolio-workspace-section">
             <div class="container">
-                <div class="graph-container">
+                <div class="portfolio-window">
+                    <div class="portfolio-window-bar">
+                        <div class="window-controls" aria-hidden="true">
+                            <span class="window-control close"></span>
+                            <span class="window-control minimize"></span>
+                            <span class="window-control maximize"></span>
+                        </div>
+                        <div class="window-title"><i class="fa-solid fa-shield-halved"></i> Vinay Workspace</div>
+                        <div class="window-status"><span></span> secure</div>
+                    </div>
+
+                    <div class="portfolio-window-body">
+                        <aside class="workspace-sidebar" aria-label="About Vinay Sharma">
+                            <div class="workspace-brand">
+                                <span class="workspace-mark">VS</span>
+                                <div>
+                                    <strong>Vinay Sharma</strong>
+                                    <small>Security Researcher</small>
+                                </div>
+                            </div>
+                            <nav class="workspace-nav" aria-label="Workspace sections">
+                                <a href="#about" class="active"><i class="fa-regular fa-user"></i> About me</a>
+                                <a href="#trajectory"><i class="fa-solid fa-chart-line"></i> Trajectory</a>
+                                <a href="#arsenal"><i class="fa-solid fa-code"></i> Tech arsenal</a>
+                            </nav>
+                            <div class="workspace-about">
+                                <span class="workspace-label">PROFILE.md</span>
+                                <p>I'm a Security Researcher and B.Tech Computer Science student at Pimpri Chinchwad University. I enjoy finding security flaws, understanding how systems break, and helping make them more secure.</p>
+                                <p>My research has been recognized by organizations including NASA, WHO, Harvard University, and Eduplus. I've also been credited with two CVEs: CVE-2025-61148 and CVE-2026-35678.</p>
+                                <p>Beyond cybersecurity, I love building things from custom hardware projects to security-focused software. Whether it's experimenting with hardware resilience or creating secure data-wiping solutions, I'm always looking for new ways to learn and solve real-world problems.</p>
+                                <div class="workspace-badges">
+                                    <span>2 CVEs</span>
+                                    <span>150+ protected</span>
+                                </div>
+                            </div>
+                            <a href="#contact" class="workspace-contact"><i class="fa-regular fa-message"></i> Start a conversation</a>
+                        </aside>
+
+                        <div id="trajectory" class="graph-container workspace-trajectory">
+                            <div class="workspace-pane-header">
+                                <div>
+                                    <span class="workspace-label">ANALYTICS / TRAJECTORY</span>
+                                    <h2>Growth over time</h2>
+                                </div>
+                                <span class="live-indicator"><i></i> Live profile</span>
+                            </div>
                     <svg viewBox="0 0 800 500" class="growth-svg">
                         <defs>
                             <linearGradient id="graph-bg-glow" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#0f172a" />
-                                <stop offset="55%" stop-color="#111827" />
-                                <stop offset="100%" stop-color="#0b1220" />
+                                <stop offset="0%" stop-color="#ffffff" />
+                                <stop offset="55%" stop-color="#f8fafc" />
+                                <stop offset="100%" stop-color="#eef2f7" />
                             </linearGradient>
                             <marker id="arrow-academics" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
-                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8" />
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b" />
                             </marker>
                             <marker id="arrow-tech" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
-                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#34d399" />
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a" />
                             </marker>
                             <marker id="arrow-skills" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
-                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8" />
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#0284c7" />
                             </marker>
                             <marker id="arrow-creativity" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
-                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#f472b6" />
+                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#db2777" />
                             </marker>
                         </defs>
                         <rect x="25" y="25" width="750" height="450" rx="26" fill="url(#graph-bg-glow)" />
@@ -281,50 +314,64 @@
                             <text x="575" y="404" class="graph-legend-text">Academics</text>
                         </g>
 
-                        <path d="M 100 292 Q 190 355 300 340 T 490 282 T 700 188" class="line-academics" marker-end="url(#arrow-academics)" />
-                        <path d="M 100 375 Q 225 402 340 360 T 520 248 T 700 130" class="line-tech" marker-end="url(#arrow-tech)" />
-                        <path d="M 100 340 Q 215 382 330 350 T 525 260 T 700 165" class="line-skills" marker-end="url(#arrow-skills)" />
-                        <path d="M 100 245 Q 215 305 330 292 T 510 235 T 700 150" class="line-creativity" marker-end="url(#arrow-creativity)" />
+                        <path d="M 100 395 Q 180 405 275 360 T 470 255 T 700 72" class="line-academics" marker-end="url(#arrow-academics)" />
+                        <path d="M 100 430 Q 195 440 310 388 T 505 240 T 700 58" class="line-tech" marker-end="url(#arrow-tech)" />
+                        <path d="M 100 418 Q 200 428 320 376 T 520 228 T 700 48" class="line-skills" marker-end="url(#arrow-skills)" />
+                        <path d="M 100 368 Q 185 388 295 334 T 495 210 T 700 92" class="line-creativity" marker-end="url(#arrow-creativity)" />
                     </svg>
 
                     <div class="graph-cta">
                         <h3>Do you want to add your organization to this graph?</h3>
                         <a href="#contact" class="btn btn-primary">Let's Connect <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
-                </div>
-            </div>
-        </section>        <!-- About Section -->
-        <section id="about" class="about-section">
-            <div class="container section-grid">
-                <div class="about-text">
-                    <h2 class="section-title">About Me</h2>
-                    <p>
-                        I am a passionate Security Researcher and VAPT specialist currently pursuing my BTech in Computer Science at Pimpri Chinchwad University with a 9+ CGPA. My journey in cybersecurity is driven by a deep curiosity to uncover vulnerabilities before they are exploited, with a focus on building defensive architectures and performing secure code reviews.
-                    </p>
-                    <p>
-                        Over the course of my research, I have been officially recognized by NASA, the World Health Organization, Harvard University, and Eduplus for reporting critical security vulnerabilities. I have also discovered two CVEs, registered as CVE-2025-61148 and CVE-2026-35678.
-                    </p>
-                    <p>
-                        Beyond active security research, I enjoy engineering custom hardware and software solutions. I built a 100kV EMP generator to test hardware resilience against electromagnetic threats, and created secure asynchronous data wiping software to guarantee the clean and safe recycling of digital assets.
-                    </p>
-                </div>
+                        </div>
 
-                <div class="skills-card">
-                    <h3><i class="fa-solid fa-laptop-code"></i> Technical Arsenal</h3>
-                    <div class="skills-tags">
-                        <span>Pentesting</span>
-                        <span>Web Security</span>
-                        <span>Networking Protocols</span>
-                        <span>OWASP Top 10</span>
-                        <span>Burpsuite</span>
-                        <span>Metasploit</span>
-                        <span>Scripting & Automation</span>
-                        <span>MITRE ATT&CK</span>
-                        <span>Secure Code Review</span>
-                        <span>Threat Modeling</span>
-                        <span>DevSecOps Knowledge</span>
-                        <span>API Security Expertise</span>
-                        <span>Communication & Reporting</span>
+                        <aside id="arsenal" class="workspace-arsenal" aria-label="Technical Arsenal">
+                            <div class="arsenal-address-bar">
+                                <i class="fa-solid fa-lock"></i>
+                                <span>localhost:5173/arsenal</span>
+                                <i class="fa-solid fa-rotate-right"></i>
+                            </div>
+                            <div class="arsenal-content">
+                                <div class="arsenal-heading">
+                                    <span class="workspace-label">CONFIG / CAPABILITIES</span>
+                                    <h3>Technical Arsenal</h3>
+                                    <p>Tools and practices used to find, validate and remediate security risks.</p>
+                                </div>
+                                <div class="arsenal-group">
+                                    <span class="arsenal-group-title">OFFENSIVE SECURITY</span>
+                                    <div class="skills-tags">
+                                        <span>Pentesting</span>
+                                        <span>Web Security</span>
+                                        <span>Burp Suite</span>
+                                        <span>Metasploit</span>
+                                        <span>OWASP Top 10</span>
+                                    </div>
+                                </div>
+                                <div class="arsenal-group">
+                                    <span class="arsenal-group-title">SECURE ENGINEERING</span>
+                                    <div class="skills-tags">
+                                        <span>Secure Code Review</span>
+                                        <span>Threat Modeling</span>
+                                        <span>API Security</span>
+                                        <span>DevSecOps</span>
+                                    </div>
+                                </div>
+                                <div class="arsenal-group">
+                                    <span class="arsenal-group-title">SYSTEMS</span>
+                                    <div class="skills-tags">
+                                        <span>Networking Protocols</span>
+                                        <span>MITRE ATT&amp;CK</span>
+                                        <span>Scripting</span>
+                                        <span>Automation</span>
+                                    </div>
+                                </div>
+                                <div class="arsenal-terminal">
+                                    <div><span>$</span> whoami</div>
+                                    <p>researcher / builder / defender</p>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </div>

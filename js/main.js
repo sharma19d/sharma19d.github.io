@@ -80,54 +80,72 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('main section[id]').forEach(section => spy.observe(section));
     }
 
-    /* ---------- Hacker name mutation (leet-speak flicker) ---------- */
-    const hackerName = document.querySelector('.hacker-name');
-    if (hackerName && !prefersReducedMotion) {
-        const originalName = hackerName.getAttribute('aria-label') || hackerName.textContent.trim();
-        const substitutions = {
-            a: ['4', '@'],
-            e: ['3'],
-            i: ['1', '!'],
-            o: ['0'],
-            r: ['4'],
-            s: ['5', '$'],
-            v: ['\\/'],
-            y: ['7']
-        };
+    /* ---------- Acknowledgment logo rotator ---------- */
+    const acknowledgmentLogos = document.querySelectorAll('.acknowledgment-logo');
+    if (acknowledgmentLogos.length) {
+        const logoPool = [
+            { src: 'assets/logo/PCU-logo.png', alt: 'PCU' },
+            { src: 'assets/logo/nasa.png', alt: 'NASA' },
+            { src: 'assets/logo/who.png', alt: 'WHO' },
+            { src: 'assets/logo/adidas.png', alt: 'Adidas' },
+            { src: 'assets/logo/eduplus.webp', alt: 'Eduplus' },
+            { src: 'assets/logo/nfl-logo.png', alt: 'NFL' }
+        ];
 
-        let charIndex = 0;
-        let variantIndex = 0;
+        const slots = [...acknowledgmentLogos].map((logoCard, slotIndex) => ({
+            card: logoCard,
+            img: logoCard.querySelector('img'),
+            slotIndex
+        })).filter(slot => slot.img);
 
-        const mutableIndexes = [...originalName]
-            .map((char, index) => ({ char: char.toLowerCase(), index }))
-            .filter(({ char }) => substitutions[char]);
+        const visible = slots.map((_, index) => index % logoPool.length);
+        const swapDuration = 180;
+        const swapInterval = 1500;
+        let slotCursor = 0;
+        let nextCursor = slots.length % logoPool.length;
 
-        const renderMutation = () => {
-            if (!mutableIndexes.length) {
+        const applyLogo = (slotIndex, logoIndex) => {
+            const slot = slots[slotIndex];
+            const logo = logoPool[logoIndex];
+            if (!slot || !logo) {
                 return;
             }
 
-            const { char, index } = mutableIndexes[charIndex];
-            const options = substitutions[char];
-            const replacement = options[variantIndex % options.length];
-            const nextName = [...originalName]
-                .map((letter, letterIndex) => (letterIndex === index ? replacement : letter))
-                .join('');
-
-            hackerName.textContent = nextName;
-            hackerName.setAttribute('data-text', nextName);
-
+            slot.card.classList.add('is-swapping');
             window.setTimeout(() => {
-                hackerName.textContent = originalName;
-                hackerName.setAttribute('data-text', originalName);
-            }, 520);
-
-            variantIndex += 1;
-            charIndex = (charIndex + 1) % mutableIndexes.length;
+                slot.img.src = logo.src;
+                slot.img.alt = logo.alt;
+                slot.card.classList.remove('is-swapping');
+            }, swapDuration);
         };
 
-        renderMutation();
-        window.setInterval(renderMutation, 1500);
+        const seedVisibleLogos = () => {
+            slots.forEach((_, index) => {
+                const logo = logoPool[visible[index] % logoPool.length];
+                if (slots[index]) {
+                    slots[index].img.src = logo.src;
+                    slots[index].img.alt = logo.alt;
+                }
+            });
+        };
+
+        if (!prefersReducedMotion) {
+            seedVisibleLogos();
+
+            window.setInterval(() => {
+                const currentVisible = new Set(visible);
+
+                while (currentVisible.has(nextCursor)) {
+                    nextCursor = (nextCursor + 1) % logoPool.length;
+                }
+
+                visible[slotCursor] = nextCursor;
+                applyLogo(slotCursor, nextCursor);
+
+                slotCursor = (slotCursor + 1) % slots.length;
+                nextCursor = (nextCursor + 1) % logoPool.length;
+            }, swapInterval);
+        }
     }
 
     /* ---------- Typed role rotator ---------- */
